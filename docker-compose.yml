@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  xmr-stak:
+    restart: always
+    build: .
+    env_file:
+      - xmr_stak.env
+    devices:
+      - /dev/dri
+    ports:
+      - 4000:4000
