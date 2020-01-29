@@ -4,6 +4,8 @@ LABEL maintainer="Alfredo Palhares <alfredo@palhares.me>"
 
 ENV CMAKE_OPTS '-DMICROHTTPD_ENABLE=ON -DXMR-STAK_COMPILE=generic -DHWLOC_ENABLE=OFF -DCPU_ENABLE=OFF -DCUDA_ENABLE=OFF'
 
+COPY xmrminer-limits.conf /etc/security/xmrminer-limits.conf
+COPY xmrminer-hugepages.conf /etc/sysctl.d/xmrminer-hugepages.conf
 WORKDIR /srv/build
 
 ## Compile XMR
